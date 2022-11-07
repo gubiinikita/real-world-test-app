@@ -34,4 +34,8 @@ class HomePage{
         this.getGlobalFeed().click();
     }
 
+    checkLikesQuantity(likes){
+        return cy.get('[href="/article/test-article-1-hjzss5"]').siblings('.article-meta').should('contain', `${likes}`)
+    }
+
 } export default new HomePage();
